@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- title>AR Director</title -->
+
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="./js/aframe-ar.js"></script>
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene id="root" embedded
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;">
+        <a-assets>
+            <!-- Vanessa Cao https://poly.google.com/view/bC3FokNqTpi (CC-BY) -->
+            <a-asset-item id="arrow" src="./model.gltf">
+            </a-asset-item>
+        </a-assets>
+
+        <a-marker type="barcode" value="26" material="" arjs-anchor="" arjs-hit-testing="">
+            <a-entity position="0.04 0 0" scale="2 2 2" rotation="0 322 0" gltf-model="#arrow">
+            </a-entity>
+        </a-marker>
+        <a-entity camera=""></a-entity>
+    </a-scene>
+    </a-scene>
+</body>
+
+</html>
