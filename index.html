@@ -23,6 +23,11 @@
     <script>
         $(document).ready(function () {
             $('select').formSelect();
+            $("#select_item").change(function () {
+                var href = location.href;
+                var url = href.slice(0, href.lastIndexOf("/")) + "/src/" + $("#select_item").val();
+                $("#link_to_demo").prop("href", url);
+            });
         });
     </script>
 </head>
@@ -35,20 +40,21 @@
 
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <h4 class="header center green-text">メンバーの選択</h3>
+            <h4 class="header center green-text">探し物/人の選択</h3>
                 <div class="row center">
-                    <h5 class="header col s12 light">表示したい人を選んでください。</h5>
+                    <h5 class="header col s12 light">場所を表示したい物/人を選んでください。</h5>
 
                     <div class="input-field col s12 m6 offset-m3">
-                        <select class="browser-default">
+                        <select class="browser-default" id="select_item">
                             <option value="" disabled selected>Choose your option</option>
-                            <option value="1">村瀬 昌満</option>
-                            <option value="2">Member 2</option>
-                            <option value="3">Member 3</option>
+                            <option value="demo26.html">キリンのぬいぐるみ</option>
+                            <option value="demo26.html">タコのぬいぐるみ</option>
+                            <option value="demo26.html">おもちゃの車</option>
+                            <option value="demo26_2.html">R2-D2</option>
                         </select>
                     </div>
                     <div class="col s12">
-                        <a class="waves-effect waves-light btn" href="./src/demo26.html">表示</a>
+                        <a id="link_to_demo" class="waves-effect waves-light btn" href="./src/demo26.html">表示</a>
                     </div>
                 </div>
         </div>
