@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>AR Seat Director</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/msgpack-lite/0.1.26/msgpack.min.js"
+        defer></script>
+    <script type="text/javascript" src="./js/index.js" defer></script>
+
+    <style type="text/css">
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        body>div {
+            flex: 1 0 auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="light-green lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">AR Seat Director</a>
+        </div>
+    </nav>
+
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <h4 class="header center green-text">探し物/人の選択</h3>
+                <div class="row center">
+                    <h5 class="header col s12 light">場所を表示したい物/人を選んでください。</h5>
+
+                    <div class="input-field col s12 m6 offset-m3">
+                        <select class="browser-default" id="select_item">
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+                    <div class="col s12">
+                        <a id="link_to_demo" class="waves-effect waves-light btn" href="./src/demo26.html">表示</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <footer class="page-footer green">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="green-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
