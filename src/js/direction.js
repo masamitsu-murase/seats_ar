@@ -28,11 +28,12 @@
     };
 
     var constructMarkers = function (directions) {
+        const angle_offset = -90;  // arrow indicates y-axis direction.
         var root = $("#root");
         var camera = $("#camera");
         directions.forEach((direction, index) => {
             var rad = Math.atan2(direction[1], direction[0]);
-            var angle = rad * 180 / Math.PI;
+            var angle = rad * 180 / Math.PI + angle_offset;
 
             var marker = document.createElement("a-marker");
             marker.setAttribute("type", "barcode");
