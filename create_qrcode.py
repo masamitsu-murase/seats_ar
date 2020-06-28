@@ -19,10 +19,14 @@ def create_url(base_url, param):
 
 
 base_url = "https://masamitsu-murase.github.io/seats_ar/src/qr_index.html"
+# base_url = "http://localhost:3000/src/qr_index.html"
 param = {
     "users": [
         ("Murase", (0, 0)),
         ("Masamitsu", (2, 2)),
+        ("Masamitsu", (2, 0)),
+        ("Masamitsu", (0, 2)),
+        ("Masamitsu", (-1, 2)),
     ],
 
     "markers": [
